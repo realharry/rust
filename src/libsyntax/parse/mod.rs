@@ -163,11 +163,6 @@ crate fn parse_item_from_source_str(name: FileName, source: String, sess: &Parse
     new_parser_from_source_str(sess, name, source).parse_item()
 }
 
-crate fn parse_stmt_from_source_str(name: FileName, source: String, sess: &ParseSess)
-                                      -> PResult<Option<ast::Stmt>> {
-    new_parser_from_source_str(sess, name, source).parse_stmt()
-}
-
 pub fn parse_stream_from_source_str(name: FileName, source: String, sess: &ParseSess,
                                     override_span: Option<Span>)
                                     -> TokenStream {
